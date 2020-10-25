@@ -7,7 +7,7 @@ This repository contains a working PID controller for the Self-Driving Car Engin
 
 ## PID tuning
 
-I chose to manually tune the controllers as I was able to find good parameters fairly quickly. I started by first setting the target speed to 30 mph for the throttle controller. The initial values for the throttle controller resulted in a stable controller with good enough performance, so I moved on to tune the steering angle controller. 
+I chose to manually tune the controllers as I was able to find good-enough parameters fairly quickly by just simple trial and error. I started by first setting the target speed to 30 mph for the throttle controller. The initial values for the throttle controller resulted in a stable controller with good enough performance, so I moved on to tune the steering angle controller. 
 
 I started by adjusting the `Kp` variable to a value where the steering angle controller was marginally stable (oscillations around the center lane did not grow in amplitude) while the controller could handle the sharpest turns without the car driving off the track. I then proceeded to increase the `Kd` parameter until the oscillations and overshoots around the track centre were small. Finally, I set the `Ki` parameter to a low number - the value I started with turned out to be low enough to compensate for biases in the system without affecting the stability or the performance of the controller noticeably. This resulted in a set of controllers which successfully drive the car around the track in a safe manner.
 
