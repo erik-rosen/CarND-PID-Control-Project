@@ -11,24 +11,24 @@ I chose to manually tune the controllers as I was able to find good parameters f
 
 I started by adjusting the `Kp` variable to a value where the steering angle controller was marginally stable (oscillations around the center lane did not grow in amplitude) while the controller could handle the sharpest turns without the car driving off the track. I then proceeded to increase the `Kd` parameter until the oscillations and overshoots around the track centre were small. Finally, I set the `Ki` parameter to a low number - the value I started with turned out to be low enough to compensate for biases in the system without affecting the stability or the performance of the controller noticeably. This resulted in a set of controllers which successfully drive the car around the track in a safe manner.
 
-Changing the individual parameters independently has the following effect on the system:
+Changing the individual parameters independently generally has the following effect on the system:
 
-Increasing `Kp` generally leads to:
-* Increase in rise time (time until it get to the target state)
+Increasing `Kp`:
+* Decrease in rise time (time until it get to the target state)
 * Increase in overshoot
 * Some decrease in steady state error
 * Degradation of stability
 
-Increasing `Kd` generally leads to:
+Increasing `Kd`:
 * Decrease in overshoot
 * Decrease in settling time (settles faster)
 * Improved stability
 
-Increasing `Ki` generally leads to:
+Increasing `Ki`:
 * Decrease in the rise time
 * Increase in overshoot
 * Increase in settling ime (takes longer to settle)
-* Elimination of steady state errors.
+* Elimination of steady state errors
 * Degradation of stability
 
 
