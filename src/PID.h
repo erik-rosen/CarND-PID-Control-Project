@@ -31,6 +31,8 @@ class PID {
    */
   double TotalError();
 
+  double GetOutput();
+
  private:
   /**
    * PID Errors
@@ -38,6 +40,7 @@ class PID {
   double p_error;
   double i_error;
   double d_error;
+  double squared_errors;
 
   /**
    * PID Coefficients
@@ -45,6 +48,8 @@ class PID {
   double Kp;
   double Ki;
   double Kd;
+
+  int number_of_iterations;
 };
 
 #endif  // PID_H
