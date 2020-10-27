@@ -1,4 +1,4 @@
-# CarND-Controls-PID
+# Self driving car: PID control project
 This repository contains a working PID controller for the Self-Driving Car Engineer Nanodegree Program. Two separate PID controllers control the steering angle and throttle of a car to safely navigate it around a track:
 
 ![alt text](pid.gif "PID controllers driving the car around a simulated track")
